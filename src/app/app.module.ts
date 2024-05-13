@@ -28,7 +28,7 @@ import { HomeComponent } from './home/home.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
-import { BodyComponent } from './hero-section/hero.component';
+import { HeroComponent } from './hero-section/hero.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component'; 
 import { WalletComponent } from './wallet/wallet.component';
@@ -48,7 +48,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ChangePasswordComponent,
     SigninComponent,
     SupportComponent,
-    BodyComponent,
+    HeroComponent,
     ViewWifiProfileComponent,
     WalletComponent,
     AboutComponent,
