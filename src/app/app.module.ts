@@ -28,7 +28,7 @@ import { HomeComponent } from './home/home.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
-import { BodyComponent } from './body/body.component';
+import { BodyComponent } from './hero-section/hero.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component'; 
 import { WalletComponent } from './wallet/wallet.component';
@@ -36,9 +36,6 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AboutComponent } from './about/about.component';
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CountDownComponent } from './test/count-down/count-down.component';
-import { GooglemapsComponent } from './googlemaps/googlemaps.component';
-
 
 @NgModule({
   declarations: [
@@ -57,8 +54,6 @@ import { GooglemapsComponent } from './googlemaps/googlemaps.component';
     AboutComponent,
     NavBarDashBoardComponent,
     DashboardComponent,
-    CountDownComponent,
-    GooglemapsComponent
   ],
   imports: [
     AppRoutingModule,

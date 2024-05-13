@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.scss']
 })
 export class BodyComponent {
 

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CountDownComponent } from './count-down.component';
+import { BodyComponent } from './hero.component';
 
-describe('CountDownComponent', () => {
-  let component: CountDownComponent;
-  let fixture: ComponentFixture<CountDownComponent>;
+describe('BodyComponent', () => {
+  let component: BodyComponent;
+  let fixture: ComponentFixture<BodyComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CountDownComponent]
+      declarations: [BodyComponent]
     });
-    fixture = TestBed.createComponent(CountDownComponent);
+    fixture = TestBed.createComponent(BodyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
