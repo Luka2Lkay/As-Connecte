@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="time-remaining">
+    <h3>TIME REMAINING</h3>
+    <!-- <p>{{days > 0 ? days + "d" : "00"}}:{{hours > 0 ? hours + "h" : "00"}}:{{minutes > 0 ? minutes + "m":
+      "00"}}:{{seconds > 0 ? seconds + "s" : "00"}}</p> -->
+      <p>{{formatTime(countdown)}}</p>
+  </div>
+  <h2 style="text-align: center;">{{isLoaded ? "" :"LOAD VOUCHER"}}</h2>
+  <form [formGroup]="voucherForm" (ngSubmit)="loadVoucher() ">
+    <mat-form-field [hidden]="isLoaded">
+      <mat-label>Enter Voucher</mat-label>
+      <input formControlName="voucher" matInput>
+    </mat-form-field><br>
+
+   
+    <div>
+       <p  [class]="message_class" class="message text-align">{{message}}</p>
+    <button mat-raised-button col or="primary" type="submit">{{isLoaded ? "Click to go online" :"LOAD"}}</button>
+    </div>
+
+    <div class="row justify-content-center bg-light shadow rounded mt-5 py-4" *ngIf ="isloasdedFrom"> 
+      <div class="col-4  text-center">
+        <a href="https://facebook.com">
+          <img class = "bg-light border rounded shadow" src="https://i.postimg.cc/FKrkPTNx/pngtree-facebook-logo-facebook-icon-png-image-3566127.png" alt="" srcset="">
+        </a>
+      </div>
+      <div class="col-4  text-center">
+        <a class="bg-light border rounded shadow " href="https://twitter.com ">
+          <img class="bg-light border rounded shadow" src="https://i.postimg.cc/hGhKMt2p/logo-black-png-twimg-1920.png" alt="">
+        </a>
+      </div>
+      <div class="col-4  text-center">
+        <a class="bg-light border " href="https://www.ayoba.me/web/home?lang=en">
+          <img class = "bg-light border rounded shadow" src="https://i.postimg.cc/MKVP7ps8/Ayoba-app-logo-removebg-preview.png" alt="" srcset="">
+        </a>
+      </div>
+      
+    </div>
+   
+  </form>
+</div>

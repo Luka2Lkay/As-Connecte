@@ -1,0 +1,47 @@
+// .card-deck {
+//     background-image: url('../images/wifi.jpg');
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+.card {
+    align-items: center;
+    margin: 15px;
+    // margin-top: 1em;
+    // margin-left: 1em;
+    // margin-right: 1em;
+    // margin-bottom: 5em;
+    background-color: rgb(212, 204, 204);
+}
+
+.devices {
+text-align: center;
+background-color: white;
+height: 60px;
+}
+
+.background{
+  background-image: url('../images/wifi.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+
+}
+
+.timer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    letter-spacing: -1px;
+  }
+  .timer span {
+    font-size: 1em;
+    margin: 0 3px 0 15px;
+  }
+
+  card-img-t{
+    position: relative;
+    bottom: 50px;
+  }

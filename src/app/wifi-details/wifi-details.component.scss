@@ -1,0 +1,72 @@
+body, h2{
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.box-area{
+    width: 800px;
+}
+
+.cancel-button {
+    position: relative;
+    left: 100%;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    color: red;
+}
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+.btn-add-wifi{
+  //set the color to green, matching the set icon
+  background-color: #04AA6D; 
+  border: none;
+  color: white;
+  padding: 15px 140px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+select, option {
+  color: red;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+/*------------ Mobile ------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}

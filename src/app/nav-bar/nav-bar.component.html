@@ -1,0 +1,38 @@
+<p class="desktop-nav">
+    <mat-toolbar class="toolbar-desktop">
+        <!-- <img src="../../assets/images/Logo.png" alt="Logo" width="55px" style="border-radius: 100%;"> -->
+        <img src="https://media.discordapp.net/attachments/1167437166331314267/1169937418955268137/Untitled_design.png?ex=65573821&is=6544c321&hm=9655f45891011564b0cebd72dd1460d4d9013c9f2706b9c1c5e9d709921ef501&=&width=411&height=411"
+            alt="Logo" width="55px" style="border-radius: 100%;" />
+        <span class="company-name">As'Connecte</span>
+        <span class="example-spacer"></span>
+
+        <div class="links">
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+            <a routerLink="/about" routerLinkActive="active">About</a>
+            <a routerLink="/signin-signup" routerLinkActive="active">Resell</a>
+            <a routerLink="/support" routerLinkActive="active">Support</a>
+        </div>
+    </mat-toolbar>
+</p>
+
+<p class="mobile-nav">
+    <mat-toolbar class="toolbar-mobile">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="https://media.discordapp.net/attachments/1167437166331314267/1169937418955268137/Untitled_design.png?ex=65573821&is=6544c321&hm=9655f45891011564b0cebd72dd1460d4d9013c9f2706b9c1c5e9d709921ef501&=&width=411&height=411"
+            alt="Logo" width="55px" style="border-radius: 100%;" />
+        </button>
+        <span class="company-name">As'Connecte</span>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="color: #fff">menu</mat-icon></button>
+
+        <mat-menu #menu="matMenu">
+            <div class="btn-link">
+                <a mat-menu-item style="margin-top: -10px;" routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-menu-item routerLink="/about" routerLinkActive="active">About</a>
+                <a mat-menu-item routerLink="/signin-signup" routerLinkActive="active">Resell</a>
+                <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support"
+                    routerLinkActive="active">Support</a>
+            </div>
+        </mat-menu>
+    </mat-toolbar>
+</p>

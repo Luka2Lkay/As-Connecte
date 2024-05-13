@@ -1,0 +1,64 @@
+<!-- <h2>Cashout Form</h2> -->
+ 
+<label for="card1" class="button return" aria-hidden="true">
+  <img src="../../assets/images/back-svgrepo-com.svg" style="width: 50px; height: 30px;" alt="">
+</label>
+<mat-card>
+  <!-- <mat-card-content>Simple card</mat-card-content> -->
+
+  <h1>Cashout Form</h1>
+  <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
+    <!-- <mat-grid-tile> -->
+<mat-form-field class="top-section">
+  <mat-label >Name</mat-label>
+  <input matInput>
+</mat-form-field>
+<!-- </mat-grid-tile> -->
+
+<!-- <mat-grid-tile> -->
+<mat-form-field class="top-section">
+  <mat-label>Cellphone number</mat-label>
+  <input matInput>
+</mat-form-field>
+<!-- </mat-grid-tile> -->
+<!-- </mat-grid-list> -->
+
+<mat-form-field>
+  <mat-label>Bank</mat-label>
+  <mat-select>
+    <mat-option value="one">Capitec Bank</mat-option>
+    <mat-option value="two">Standard Bank</mat-option>
+    <mat-option value="three">ABSA</mat-option>
+    <mat-option value="four">TYME Bank</mat-option>
+    <mat-option value="five">FNB</mat-option>
+    <mat-option value="six">Nedbank</mat-option>
+    <mat-option value="seven">Investec Bank</mat-option>
+    <!-- <mat-option value="eight"></mat-option> -->
+  </mat-select>
+  
+</mat-form-field>
+
+<mat-form-field floatLabel="always">
+  <mat-label>Amount</mat-label>
+  <input matInput type="number" class="example-right-align" placeholder="0" style="color: black;">
+  <span matTextPrefix>R&nbsp;</span>
+  <!-- <span matTextSuffix>.00</span> -->
+</mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>My reference</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Their reference</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<button button mat-raised-button style="background-color: green;" type="submit">CASHOUT</button>
+
+</mat-card>
+
+
+

@@ -1,0 +1,46 @@
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="row border rounded-5 p-3 bg-white shadow box-area">
+    <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+      style="background: white;">
+      <div class="featured-image mb-3">
+        <img src="https://i.postimg.cc/FFfQp3Gy/5118825.jpg" class="img-fluid" style="width: 250%;">
+      </div>
+      <p class="text-white fs-2" style="font-family: 'Kristen ITC'; font-weight: 600;">Connect'a | Nawe!</p>
+      <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Kristen ITC;">become verified
+        today!</small>
+    </div>
+    <div class="col-md-6 right-box">
+      <div class="row align-items-center">
+        <div class="header-text mb-4">
+          <button (click)="cancel()" class="cancel-button">x</button>
+          <h2>Hello, Again
+            <br>Add your router with us!.
+          </h2>
+        </div>
+        <form [formGroup]="wifiDetailsForm" (ngSubmit)="submitForm()">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiName"
+              placeholder="wifi name" required="wifiname">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiProvider"
+              placeholder="wifi provider" required="wifiProvider">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" type="password" class="form-control form-control-lg bg-light fs-6" formControlName="wifiPassword"
+              placeholder="wifi password" required="wifiPassword">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiSpeed"
+              placeholder="wifi Speed" required="wifiSpeed">
+          </div>
+          <div class="input-group-mb-3">
+            <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" class="btn-add-wifi">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

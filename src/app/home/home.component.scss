@@ -1,0 +1,33 @@
+.container {
+  overflow: hidden;
+}
+html {
+  height: 100%;
+}
+.products {
+  margin-top: 2em;
+}
+@media only screen and (min-width: 992px) {
+  .products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loadvoucher {
+    position: relative;
+  }
+}
+
+// app-body{
+//   position: relative;
+//   bottom: 2%;
+// }
+
+.loadvoucher {
+  position: relative;
+  top: 100px;
+}
+
+ 
+

@@ -1,0 +1,65 @@
+.support-card {
+    max-width: 400px;
+    margin: 2em auto;
+
+}
+
+form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+
+}
+
+.main {
+    width: 82%;
+    margin: 0 auto;
+    background-image: url('../images/wifi.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.image-style {
+    display: flex;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+button {
+    width: 10em;
+}
+
+mat-label {
+    padding-left: 1.8em;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .main {
+        width: 82%;
+        margin: 0 auto;
+        background-image: url('../images/wifi.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 2em;
+    }
+   
+}

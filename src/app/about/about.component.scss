@@ -1,0 +1,129 @@
+h1{
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
+  left: 40px;
+  margin-top: 20px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+  overflow: hidden;
+}
+html {
+  height: 100%;
+}
+
+.card-custom {
+  overflow: hidden;
+  min-height: 100px;
+  min-width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+ font-size: small;
+font-weight: bolder;
+
+}
+
+.card-custom-img {
+
+  height:100px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+  
+}
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  width: 100px;
+  height: 100px;
+  
+}
+
+.grid-holder{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    gap: 5px;
+}
+
+.item{
+    border-radius: 15px;
+    // min-width: 100px;
+    max-height: 100rem;
+    max-width: 100rem;
+    
+}
+
+@media only screen and (max-width: 992px){
+
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // margin-top: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+ 
+  
+.grid-holder{
+  display: flex;
+  // grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  // gap: 5px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.row{
+  display: flex;
+  // flex-flow: row wrap;
+  justify-content: center;
+  // flex-direction: column;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  max-height: 100rem;
+  max-width: 100rem;
+  position: relative;
+  left: 60px;
+}
+
+}
+

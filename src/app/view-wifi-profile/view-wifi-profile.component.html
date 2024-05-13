@@ -1,0 +1,26 @@
+<app-nav-bar-dash-board></app-nav-bar-dash-board>
+
+<body>
+  <h1 class="heading">Wifi Information</h1>
+  <button class="add-button" routerLink="/wifi-details">Add Wifi</button>
+  <table>
+    <thead>
+      <tr class="columns">
+        <th>Wifi Name</th>
+        <th>Wifi Provider</th>
+        <th>Wifi Speed</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let detail of wifiDetails">
+      <tr>
+        <td>{{detail.wifiName | uppercase }}</td>
+        <td>{{detail.wifiProvider | uppercase }}</td>
+        <td>{{detail.wifiSpeed | uppercase }}</td>
+        <td (click)="removeWifi(detail._id)"><span class="material-symbols-outlined">
+            delete
+          </span></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
