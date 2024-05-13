@@ -32,8 +32,8 @@ export class LoadvoucherComponent implements OnInit {
   message_class = ""
   isLoaded: any = false;
   oneDayVouchers = ['123456789124', '123456789125'];
-  // threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
-  // sevenDaysVouchers = ['123456789133', '123456789144', '123456789155'];
+  threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
+  sevenDaysVouchers = ['123456789133', '123456789144', '123456789155'];
 
   days: any = 0;
   hours: any = 0;
@@ -42,21 +42,6 @@ export class LoadvoucherComponent implements OnInit {
   isloasdedFrom :any
   ngOnInit(): void {
     this.isloasdedFrom = localStorage.getItem("isLoaded")
-    // const storedTime = Number(localStorage.getItem("timerExpiration"));
-    // const now = localStorage.getItem('now');
-
-    // if (storedTime) {
-    //   this.startTime = Number(storedTime);
-    //   console.log(now)
-    //   //this.resumeCountdown();
-    //   console.log(this.startTime)
-    // } else {
-    //   // Step 1: Start a new countdown
-    //   this.startTime = new Date().getTime();
-    //   //localStorage.setItem('countdownStartTime', this.startTime.toString());
-    //   console.log(storedTime)
-    
-    // }
 
     //saves on the localStorage
       const redeemedVoucher = localStorage.getItem('redeemedVoucher');
@@ -69,105 +54,11 @@ export class LoadvoucherComponent implements OnInit {
       }
   }
 
-
-    // resumeCountdown1() {
-    //   setInterval(() => {
-    //     // Step 3: Calculate remaining time and update display
-    //     const currentTime = new Date().getTime();
-    //     const elapsedTime = currentTime - this.startTime;
-    //     const remainingTime = this.countdownDuration - elapsedTime;
-
-    //     this.days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-    //     this.hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //     this.minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    //     this.seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-    //   }, 1000);
-    // }
-  
-
-  // resumeCountdown() {
-  //   setInterval(() => {
-      
-  //     // Step 3: Calculate remaining time and update display
-  //     const currentTime = new Date().getTime();
-  //     const elapsedTime = Number(currentTime - this.startTime);
-  //     const remainingTime = Number(this.countdownDuration - elapsedTime);
-
-  //     this.days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-  //     this.hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //     this.minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-  //     this.seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-  //     console.log(typeof(this.seconds ))
-  //     localStorage.setItem('countdownStartTime', JSON.stringify(this.startTime));
-  //   }, 1000);
-  // }
-
-  // getOneDayVoucher() {
-
-  //   const date = new Date().toDateString().split(' ');
-  //   const getHours = new Date().getHours();
-  //   const getMinutes = new Date().getMinutes();
-  //   const getSeconds = new Date().getSeconds();
-
-  //   const countDownDate = new Date(
-  //     `Nov ${parseInt(date[2]) + 1}, 2023 ${getHours}:${getMinutes}:${getSeconds}`
-  //   ).getTime();
-
-
-  
-  //   setInterval(() => {
-  //     const currentTime = new Date().getTime();
-  //     const timeDiff = countDownDate - currentTime;
-  
-  //     //update time remaning
-  //     this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-  //     this.hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //     this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-  //     this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-  //     // Check if the timer has expired
-  //     this.isTimerExpired = timeDiff <= 0;
-            
-  //     // Update sessionStorage with the remaining time
-  //     localStorage.setItem('timerExpiration', timeDiff.toString());
-  //     localStorage.setItem('now',Date());
-      
-  //   }, 
-  //   1000);
-  // }
-
-    // resumeTime(){
-    //   const storedTimeDiff = localStorage.getItem('timerExpiration');
-    //   if(storedTimeDiff){
-    //     const timeDiff = parseInt(storedTimeDiff, 10);
-
-    //     //call getOnedayVoucher with remaining time
-    //     this.getOneDayVoucher();
-    //   } else {
-    //     //start a new timer if no stored time
-    //     this.getOneDayVoucher();
-    //   }
-    // }
-
-
-  // clearTimeInteval(){
-  //   //clear the interval when the component is distroyed
-  //   if(this.)
-  // }
-
-
     loadVoucher() {
     let array = []
     let ls_voucher = localStorage.getItem('redeemedVoucher')
     const { voucher } = this.voucherForm.value;
    
-    // if(voucher == ls_voucher){
-      
-    //   this.message = "Voucher already redeemed!";
-    //   this.message_class = 'fail'
-    //   return
-    // }
-
     this.message = this._voucherService.invalidVoucher(voucher);
 
     this.validateRedeemedVoucher();
@@ -182,7 +73,6 @@ export class LoadvoucherComponent implements OnInit {
         
         if (this.oneDayVouchers.includes(voucher)) {
           this.redeemVoucher();
-          //this.resumeCountdown1()
         }  
       }
     } else if (this.isLoaded === true) {
@@ -196,8 +86,6 @@ export class LoadvoucherComponent implements OnInit {
       this.message = 'Seems like the voucher has already been loaded!';
     }
   }
-
-  //
 
       startCountdown() {
       this.countdown = this.getRemainingTime();
@@ -225,9 +113,7 @@ export class LoadvoucherComponent implements OnInit {
       }
 
       private pad(value: number):string {
-        
         return value < 10 ? `0${value}`: `${value}`;
-
       }
 
       getRemainingTime(): number {
@@ -258,8 +144,7 @@ export class LoadvoucherComponent implements OnInit {
         }
 
         validateRedeemedVoucher(){
-          // const redeemedVoucher = localStorage.getItem('redeemedVoucher');
-    
+
           const { voucher } = this.voucherForm.value;
           this.redeemedVoucher = voucher;
           
