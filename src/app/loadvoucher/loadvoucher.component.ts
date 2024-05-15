@@ -12,36 +12,31 @@ export class LoadvoucherComponent implements OnInit {
   timer: any;
   redeemedVoucher!: string;
   expirationTime!: number;
-  voucherCode!: string
+  voucherCode!: string 
 
   isTimerExpired: boolean = false;
-
-  // myVouche={voucherid: 1,
-  // expirationTime:this.expirationTime,
-  // price: 24, voucherCode: '123456'}
 
   voucherForm: FormGroup = new FormGroup({
     voucher: new FormControl('', Validators.required),
   });
-  private startTime!: number;
-  private readonly countdownDuration = 60 * 60 * 1000;
+  // private startTime!: number;
+  // private readonly countdownDuration = 60 * 60 * 1000;
 
   constructor(private _voucherService: VoucherloadedService) {}
 
   message?: string;
   message_class = ""
-  isLoaded: any = false;
+  isLoaded: boolean = false;
   oneDayVouchers = ['123456789124', '123456789125'];
   threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
   sevenDaysVouchers = ['123456789133', '123456789144', '123456789155'];
 
-  days: any = 0;
-  hours: any = 0;
-  minutes: any = 0;
-  seconds: any = 0;
-  isloasdedFrom :any
+  days: number = 0;
+  hours: number = 0;
+  minutes: number = 0;
+  seconds: number = 0;
+  
   ngOnInit(): void {
-    this.isloasdedFrom = localStorage.getItem("isLoaded")
 
     //saves on the localStorage
       const redeemedVoucher = localStorage.getItem('redeemedVoucher');
@@ -55,8 +50,8 @@ export class LoadvoucherComponent implements OnInit {
   }
 
     loadVoucher() {
-    let array = []
-    let ls_voucher = localStorage.getItem('redeemedVoucher')
+    const array = []
+
     const { voucher } = this.voucherForm.value;
    
     this.message = this._voucherService.invalidVoucher(voucher);
@@ -68,8 +63,8 @@ export class LoadvoucherComponent implements OnInit {
         this.message = 'Succesfully loaded';
         this.message_class = 'success'
         this.isLoaded = true;
-        this.isloasdedFrom = true
-        localStorage.setItem('isLoaded', this.isLoaded)
+        // this.isloasdedFrom = true
+        localStorage.setItem('isLoaded', this.isLoaded.toString())
         
         if (this.oneDayVouchers.includes(voucher)) {
           this.redeemVoucher();
