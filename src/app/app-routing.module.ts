@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 import { WalletComponent } from './wallet/wallet.component';
-import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +23,6 @@ const routes: Routes = [
   { path: 'wifi-details', component: WifiDetailsComponent },
   {path: 'wallet', component: WalletComponent},
   {path: 'view-wifi-profile', component:ViewWifiProfileComponent},
-  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

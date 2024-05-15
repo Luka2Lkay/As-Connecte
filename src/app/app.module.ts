@@ -33,7 +33,6 @@ import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component'; 
 import { WalletComponent } from './wallet/wallet.component';
 
-import { AboutComponent } from './about/about.component';
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -51,7 +50,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeroComponent,
     ViewWifiProfileComponent,
     WalletComponent,
-    AboutComponent,
     NavBarDashBoardComponent,
     DashboardComponent,
   ],
