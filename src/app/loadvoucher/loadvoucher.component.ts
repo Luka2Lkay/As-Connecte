@@ -19,9 +19,7 @@ export class LoadvoucherComponent implements OnInit {
   voucherForm: FormGroup = new FormGroup({
     voucher: new FormControl('', Validators.required),
   });
-  // private startTime!: number;
-  // private readonly countdownDuration = 60 * 60 * 1000;
-
+  
   constructor(private _voucherService: VoucherloadedService) {}
 
   message?: string;
@@ -55,8 +53,6 @@ export class LoadvoucherComponent implements OnInit {
     const { voucher } = this.voucherForm.value;
    
     this.message = this._voucherService.invalidVoucher(voucher);
-
-    this.validateRedeemedVoucher();
 
     if (this.isLoaded === false) {
       if (this.oneDayVouchers.includes(voucher)) {
@@ -126,8 +122,7 @@ export class LoadvoucherComponent implements OnInit {
             console.log("~ Invalid Voucher")
             return
           }
-
-  
+ 
           this.expirationTime = this.calculateExpirationTime();
 
           localStorage.setItem('redeemedVoucher', this.redeemedVoucher);
@@ -135,19 +130,6 @@ export class LoadvoucherComponent implements OnInit {
             JSON.stringify(this.expirationTime));
 
           this.startCountdown()
-
-        }
-
-        validateRedeemedVoucher(){
-
-          const { voucher } = this.voucherForm.value;
-          this.redeemedVoucher = voucher;
-          
-          if(voucher == localStorage.getItem('redeemedVoucher')){
-            this.message = "Voucher doesn't exist";
-            return
-          }
-            localStorage.removeItem('redeemedVoucher')
         }
 
         private calculateExpirationTime(): number {

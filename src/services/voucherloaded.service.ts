@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class VoucherloadedService {
   constructor() { }
 
-  invalidVoucher(voucher: any) {
+  invalidVoucher(voucher: string) {
     let message;
     if (voucher.length < 12 || (voucher.length > 12 && voucher.length > 0)) {
       message = 'The voucher must be 12 digits long!'
