@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { WalletComponent } from './wallet/wallet.component';
 
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WalletComponent,
     NavBarDashBoardComponent,
     DashboardComponent,
+    SuccessDialogComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -72,7 +75,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent],

@@ -5,24 +5,24 @@
             <mat-card-title style="color: black;">Customer Support</mat-card-title>
         </mat-card-header>
 
-        <form [formGroup]="supportForm" (ngSubmit)="submitSupportForm()">
+        <form [formGroup]="supportForm" (ngSubmit)="submitSupportForm()" [class]="isHidden ? 'hide' : 'show' ">
             <mat-card-content>
                 <mat-form-field id="cellphone" appearance="outline">
                     <mat-label for="cellphone">Cellphone</mat-label>
                     <mat-icon aria-hidden="false" aria-label="phone icon" fontIcon="phone"></mat-icon>
-                    <input matInput type="tel" formControlName="cellphone" placeholder="Enter 10 digit phone number" pattern="^[0-9]*" required="true">
+                    <input matInput type="tel" formControlName="cellphone" placeholder="Enter 10 digit phone number" pattern="^\d{10}$" required="true">
                 </mat-form-field>
 
                 <mat-form-field id="email" appearance="outline">
                     <mat-label for="email">email</mat-label>
                     <mat-icon aria-hidden="false" aria-label="email icon" fontIcon="email"></mat-icon>
-                    <input matInput formControlName="email" type="email" required="true">
+                    <input matInput formControlName="email" type="email" required>
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Reason for contact</mat-label>
-                    <mat-icon aria-hidden="false" aria-label="help icon" fontIcon="help"></mat-icon>
-                    <mat-select>
+                    <mat-icon aria-hidden="false"  aria-label="help icon" fontIcon="help"></mat-icon>
+                    <mat-select formControlName="reasonForContact">
                         <mat-option value="option">My Reseller Account</mat-option>
                         <mat-option value="option">About Asconnecte</mat-option>
                         <mat-option value="option">Other</mat-option>
@@ -38,12 +38,9 @@
                 <mat-divider></mat-divider>
 
                 <mat-card-actions>
-                    <button button mat-raised-button color="primary" type="submit">Submit</button>
+                    <button button mat-raised-button color="primary" [disabled]="!supportForm.valid" type="submit">Submit</button>
                 </mat-card-actions>
             </mat-card-content>
-            <!-- <mat-card-footer>
-                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-            </mat-card-footer> -->
         </form>
     </mat-card>
 </div>

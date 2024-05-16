@@ -11,6 +11,10 @@ form {
 
 }
 
+.hide {
+    display: none;
+}
+
 .main {
     width: 82%;
     margin: 0 auto;
@@ -19,6 +23,7 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 2em;
+    height: 100vh;
 }
 
 mat-form-field {
