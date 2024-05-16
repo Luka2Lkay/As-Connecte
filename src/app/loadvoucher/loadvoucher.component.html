@@ -5,17 +5,17 @@
 
       <p>{{formatTime(countdown)}}</p>
   </div>
-  <h2 style="text-align: center;">{{isLoaded ? "" :"LOAD VOUCHER"}}</h2>
+  
+  <h2 style="text-align: center;" [class]="isHidden ? 'hide' : 'show'">{{isLoaded ? "" :"LOAD VOUCHER"}}</h2>
   <form [formGroup]="voucherForm" (ngSubmit)="loadVoucher() ">
-    <mat-form-field [hidden]="isLoaded">
+    <mat-form-field [hidden]="isLoaded" [class]="isHidden ? 'hide' : 'show'">
       <mat-label>Enter Voucher</mat-label>
       <input formControlName="voucher" matInput>
     </mat-form-field><br>
 
-   
     <div>
-       <p  [class]="message_class" class="message text-align">{{message}}</p>
-    <button mat-raised-button col or="primary" type="submit">{{isLoaded ? "Click to go online" :"LOAD"}}</button>
+       <p class="message text-align">{{message}}</p>
+    <button mat-raised-button col or="primary" type="submit" >{{isLoaded ? "Click to go online" :"LOAD"}}</button>
     </div>
 
     <div class="row justify-content-center bg-light shadow rounded mt-5 py-4" *ngIf ="isLoaded"> 
