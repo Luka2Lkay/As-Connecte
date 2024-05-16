@@ -137,7 +137,7 @@ export class LoadvoucherComponent implements OnInit {
 
   private calculateExpirationTime(): number {
     const currentTimestamp = Math.floor(new Date().getTime() / 1000);
-    return currentTimestamp - 1 + 1 * 60;
+    return currentTimestamp - 1 +  (24 * 60 * 60);
   }
 
   twitter() {
