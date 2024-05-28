@@ -2,13 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  
-  }
-  
-  body,
-  input {
 	font-family: Arial, Helvetica, sans-serif;
-	
   }
   
 .message {
@@ -93,30 +87,19 @@
 	grid-template-columns: 25% 10%;
 	padding: 0 0.4rem;
 	position: relative;
-  }
-  
-  .input-field i {
 	text-align: center;
 	line-height: 55px;
 	transition: 0.5s;
   }
   
-  .input-field input {
-	border-bottom-color: black;
-	border-left-color: black;
-	border-right-color:black;
-	border-top-color: black;
-  
+  .input-field input {  
 	text-align: center;
 	border-radius: 10px; 
 	line-height: 100%; 
-	font-weight: bolder;
+	font-weight: 700;
 	font-size: 13px;
-	color: black;
 	width: 200%;
-	
   }
-  
   
   .btn {
 	width: 240px;
@@ -126,13 +109,11 @@
 	border-color: green;
 	height: 50px;
 	border-radius: 50px;
-	color: whiteg;
-	font-weight: bolder;
-	// margin: 1px 0;
+	color: #fff;
+	font-weight: 400;
 	cursor: pointer;
 	transition: 0.5s;
 	margin-left: 40px;
-	
   }
   
   .btn:hover {
@@ -202,8 +183,6 @@
 	line-height: 1;
 	font-size: 1.5rem;
   }
-  
-  
   
   .panel p {
 	font-size: 0.95rem;
