@@ -61,7 +61,7 @@ export class ResellerService {
   signIn(data: SignInInterface): void {
     this._http
       .post<{ token: String; expiresIn: Number }>(
-        `${this.apiUrl}/reseller/signin`,
+        "https://as-connecte-back-end.vercel.app/reseller/signin",
         data
       )
       .subscribe({
