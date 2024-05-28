@@ -12,6 +12,8 @@ import { Subject } from 'rxjs';
 export class ResellerService {
   constructor(private _http: HttpClient, private _router: Router) {}
 
+  private apiUrl: string = "https://as-connecte-back-end.vercel.app"
+
   private token?: string;
   private authenticatedUser: boolean = false;
   private logoutTimer: any;
@@ -51,7 +53,7 @@ export class ResellerService {
 
   signup(data: RegistrationInterface): Observable<RegistrationInterface> {
     return this._http.post<RegistrationInterface>(
-      'http://127.0.0.1:3300/reseller/signup',
+      `${this.apiUrl}/reseller/signup`,
       data
     );
   }
@@ -59,7 +61,7 @@ export class ResellerService {
   signIn(data: SignInInterface): void {
     this._http
       .post<{ token: String; expiresIn: Number }>(
-        'http://127.0.0.1:3300/reseller/signin',
+        `${this.apiUrl}/reseller/signin`,
         data
       )
       .subscribe({
